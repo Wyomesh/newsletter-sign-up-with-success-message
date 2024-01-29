@@ -58,6 +58,9 @@ p img {
 }
 .error {
   display: none;
+  color: hsl(4, 100%, 67%);
+  display: grid;
+  justify-content: flex-end;
 }
 .emailForm input {
   padding: 1rem;

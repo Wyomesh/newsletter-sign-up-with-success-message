@@ -21,6 +21,8 @@ if (window.location.href.split("/").slice(-1)[0] === "success.html") {
       console.log(document);
     } else {
       error.style.display = "grid";
+      error.parentNode.parentNode.querySelector("input").style.color =
+        "hsl(4, 100%, 67%)";
     }
   });
 }
