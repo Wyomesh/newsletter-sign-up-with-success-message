@@ -4,7 +4,6 @@ if (window.location.href.split("/").slice(-1)[0] === "success.html") {
   const dissmiss = document.querySelector(".dismissBtn");
   dissmiss.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log(e);
     window.location.href = "./index.html";
   });
 } else {
@@ -14,15 +13,24 @@ if (window.location.href.split("/").slice(-1)[0] === "success.html") {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (e.target[0].value.match(emailRegex)) {
-      console.log(e.target[0].value);
       error.style.display = "none";
       window.location.href = "./success.html";
       e.target[0].value = "";
-      console.log(document);
     } else {
       error.style.display = "grid";
       error.parentNode.parentNode.querySelector("input").style.color =
         "hsl(4, 100%, 67%)";
+      error.parentNode.parentNode
+        .querySelector("input")
+        .addEventListener("click", (e) => {
+          error.parentNode.parentNode
+            .querySelector("input")
+            .addEventListener("keydown", (e) => {
+              error.style.display = "none";
+              error.parentNode.parentNode.querySelector("input").style.color =
+                "hsl(231, 7%, 60%)";
+            });
+        });
     }
   });
 }
