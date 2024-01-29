@@ -87,7 +87,7 @@ button:hover {
   justify-content: center;
   align-self: center;
   background-color: hsl(0, 0%, 100%);
-  max-width: 30vw;
+  width: 30vw;
   padding: 3rem;
   border-radius: 20px;
 }
@@ -174,6 +174,26 @@ button:hover {
   }
   p img {
     width: 12px;
+  }
+  .successCard {
+    width: 55vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .successCard h1 {
+    font-size: 14px;
+  }
+  .successCard p {
+    font-size: 12px;
+  }
+  .done img {
+    width: 40px;
+  }
+  .dismissBtn {
+    width: calc(55vw - 2rem);
+  }
+  .successCard * {
+    word-break: break-all;
   }
 }
 @media screen and (max-width: 119px) {

@@ -1,4 +1,6 @@
-if (window.location.href === "http://127.0.0.1:3000/success.html") {
+// console.log(window.location.href.split("/").slice(-1));
+
+if (window.location.href.split("/").slice(-1)[0] === "success.html") {
   const dissmiss = document.querySelector(".dismissBtn");
   dissmiss.addEventListener("click", (e) => {
     e.preventDefault();
